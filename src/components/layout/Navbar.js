@@ -21,8 +21,8 @@ class Navbar extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
 
-            <NavBarLink to={"/Login"} label="Login"/>
-            <NavBarLink to={"/SignUp"} label="SignUp"/>
+            <NavBarLink to={"/Login"} label="تسجيل دخول"/>
+            <NavBarLink to={"/SignUp"} label="تسجيل جديد"/>
 
 
           </ul>

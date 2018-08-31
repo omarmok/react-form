@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -26,13 +28,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
+body{
+  direction: rtl;  font-family: 'Cairo', sans-serif;
+}
 .navbar-light{
   background: #144ea5;
   color: white
 }
  .nav-link {
-  color:yellow !important;
+  color:yellow !important;  font-family: 'Cairo', sans-serif;
 }
 
 .nav-link.active{
@@ -40,5 +44,26 @@
   color: white !important;
 }
 
+.form-control{
+  background-color: #f6f6f6;
+  background-clip: padding-box;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+}
 
+.title{
+  font-family: 'Cairo', sans-serif;
+background:#2c67be;color:#fff;
 
+font-size: 20px;
+
+}
+.Submit{
+  font-family: 'Cairo', sans-serif;
+}
+.footer{
+  font-family: 'Cairo', sans-serif;
+
+  color: #096eb9;
+    font-size: 14px;
+}

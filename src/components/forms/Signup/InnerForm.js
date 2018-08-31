@@ -23,7 +23,7 @@ const DefaultInput = ({ label, children }) =>(
 }) => (
   <form onSubmit={handleSubmit}>
 
-    <DefaultInput label="Name">
+    <DefaultInput label="الاسم">
                 <Field type="text" name="name" className="form-control" />
                 {touched.name && errors.name && <p className="form-text text-danger"> {errors.name} </p>}
             </DefaultInput>
@@ -43,8 +43,8 @@ const DefaultInput = ({ label, children }) =>(
                 <Field type="password" name="passwordConfirm" className="form-control" />
             </DefaultInput>
 
-    <button type="Submit" disabled={isSubmitting}>
-      Submit
+    <button type="Submit" className="btn-block btn-info Submit" disabled={isSubmitting}>
+    تسجيل الدخول
     </button>
   </form>
 );
