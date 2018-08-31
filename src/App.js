@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import Login from './routes/Login';
-import SignUp from './routes/SignUp';
-import { BrowserRouter, Route } from 'react-router-dom'
 
+import { BrowserRouter, Route } from 'react-router-dom';
+import React, { Component } from 'react';
+
+import Login from './components/routes/Login';
+import Navbar from './components/layout/Navbar';
+import SignUp from './components/routes/SignUp';
 
 class App extends Component {
   render() {
