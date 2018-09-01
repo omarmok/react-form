@@ -1,5 +1,6 @@
 import { Field } from 'formik';
 import React from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const DefaultInput = ({ label, children }) =>(
 <div className="form-group row">
@@ -20,6 +21,8 @@ const DefaultInput = ({ label, children }) =>(
   handleBlur,
   handleSubmit,
   isSubmitting,
+  dirty,
+  setFeldValue
 }) => (
   <form onSubmit={handleSubmit}>
 
@@ -41,9 +44,14 @@ const DefaultInput = ({ label, children }) =>(
 
      <DefaultInput label="Confirm Password">
                 <Field type="password" name="passwordConfirm" className="form-control" />
+                {touched.passwordConfirm && errors.passwordConfirm && <div>{errors.passwordConfirm}</div>}
+
             </DefaultInput>
 
-    <button type="Submit" className="btn-block btn-info Submit" disabled={isSubmitting}>
+ <ReCAPTCHA className=" mb-5 " name="recaptcha" sitekey="6Legp2EUAAAAAKZhVvBOIj-d6mbHGwrWBfPEoiMX" onChange={(response)=> setFeldValue('recaptcha',response)}/>
+
+
+    <button  className="btn-block mt-4 btn-defualt" type="Submit"  disabled={!dirty || isSubmitting || Object.keys(errors).length}>
     تسجيل الدخول
     </button>
   </form>

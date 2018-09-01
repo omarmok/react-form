@@ -30,6 +30,7 @@
 }
 body{
   direction: rtl;  font-family: 'Cairo', sans-serif;
+  list-style: none;
 }
 .navbar-light{
   background: #144ea5;
