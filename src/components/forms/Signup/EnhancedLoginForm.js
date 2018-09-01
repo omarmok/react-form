@@ -2,26 +2,31 @@ import InnerForm from './InnerForm';
 import {
   withFormik
 } from 'formik';
+import * as Yup from 'yup';
+import { ApiService } from '../../services/data.service';
+import { toast} from 'react-toastify';
+const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{6,}$/
+
+
 // Wrap our form with the using withFormik HoC
 const EnhancedLoginForm = withFormik({
   // Transform outer props into form values
-  mapPropsToValues: props => ({
-    email: '',
-    password: ''
-  }),
+  mapPropsToValues: props => ({ name: '',email: '',password:'',passwordConfirm:''}),
   // Add a custom validation function (this can be async too!)
-  validate: (values, props) => {
-    const errors = {};
-    if (!values.email) {
-      errors.email = 'Required';
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
-      errors.email = 'Invalid email address';
-    }
-    return errors;
-  },
-  // Submission handler
+  validationSchema:Yup.object().shape({
+
+    name:Yup.string().max(20,'الاسم لايزيد عن ٢٠ حرف').min(3,'لايقل الاسم عن ٣ احرف').required('حقل مطلوب'),
+
+    email:Yup.string().email('ايميل غير صحيح').required('حقل مطلوب'),
+
+    password:Yup.string().matches(passwordPattern,'كلمة مرور ضعفة').required('حقل مطلوب'),
+
+
+    passwordConfirm:Yup.string().oneOf([ Yup.ref('password')],'كلمة مرور ضعفة').required('حقل مطكلمة المرور غير متطابقة'),
+    recaptcha:Yup.string().required()
+
+  }),
+
   handleSubmit: (
     values, {
       props,
@@ -29,7 +34,14 @@ const EnhancedLoginForm = withFormik({
       setErrors /* setValues, setStatus, and other goodies */ ,
     }
   ) => {
-    console.log(values)
+    ApiService.signup({name: values.name, email: values.email, password: values.password, 'g-recaptcha-response': values.recaptcha}).then(payload=>{
+      setSubmitting(false)
+      toast.success('signed up succ').catch(err=>{
+        // setErrors({recaptcha:true})
+        setSubmitting(false)
+        toast.error(err.data && err.data.msg ? err.data.msg : 'error')
+      })
+    })
   },
 })(InnerForm);
 

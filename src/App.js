@@ -7,6 +7,7 @@ import Footer from './components/layout/Footer';
 import Login from './components/routes/Login';
 import Navbar from './components/layout/Navbar';
 import SignUp from './components/routes/SignUp';
+import Home from './components/routes/Home';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
       <BrowserRouter>
        <div>
          <Navbar />
+           <Route path="/home" component={Home} exact/>
            <Route path="/login" component={Login}/>
            <Route path="/signUp" component={SignUp}/>
            <Footer />
