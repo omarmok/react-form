@@ -1,11 +1,12 @@
 {
-  "homepage": "https://omarmok.github.io/react-form",
+  "homepage": "https://omarmok.github.io/react-form/",
   "name": "react-form",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.1",
     "bootstrap": "^4.3.1",
+    "countdownchamp": "^0.1.0",
     "eslint": "^5.4.0",
     "eslint-plugin-react": "^7.11.1",
     "font-awesome": "^4.7.0",
