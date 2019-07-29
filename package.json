@@ -1,11 +1,10 @@
 {
-  "homepage": "https://omarmok.github.io/react-form/",
+  "homepage": "https://omarmok.github.io/react-form",
   "name": "react-form",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.1",
-    "babel-eslint": "^9.0.0",
     "bootstrap": "^4.3.1",
     "eslint": "^5.4.0",
     "eslint-plugin-react": "^7.11.1",
@@ -29,10 +28,21 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "eslint": "^5.4.0",
     "eslint-plugin-react": "^7.11.1",
     "webpack-dev-server": "^3.1.11"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
