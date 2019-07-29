@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-form/static/css/main.f3bd21ef.chunk.css",
+    "main.js": "/react-form/static/js/main.3885410e.chunk.js",
+    "main.js.map": "/react-form/static/js/main.3885410e.chunk.js.map",
+    "runtime~main.js": "/react-form/static/js/runtime~main.98e38a88.js",
+    "runtime~main.js.map": "/react-form/static/js/runtime~main.98e38a88.js.map",
+    "static/css/2.942673ba.chunk.css": "/react-form/static/css/2.942673ba.chunk.css",
+    "static/js/2.5f61630f.chunk.js": "/react-form/static/js/2.5f61630f.chunk.js",
+    "static/js/2.5f61630f.chunk.js.map": "/react-form/static/js/2.5f61630f.chunk.js.map",
+    "index.html": "/react-form/index.html",
+    "precache-manifest.2b98893b1da7b7a29aa04baf519d228c.js": "/react-form/precache-manifest.2b98893b1da7b7a29aa04baf519d228c.js",
+    "service-worker.js": "/react-form/service-worker.js",
+    "static/css/2.942673ba.chunk.css.map": "/react-form/static/css/2.942673ba.chunk.css.map",
+    "static/css/main.f3bd21ef.chunk.css.map": "/react-form/static/css/main.f3bd21ef.chunk.css.map",
+    "static/media/font-awesome.css": "/react-form/static/media/fontawesome-webfont.fee66e71.woff"
+  }
+}
