@@ -18,6 +18,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^3.0.1",
     "react-toastify": "^4.2.3",
+    "wow.js": "^1.2.2",
     "yup": "^0.24.1"
   },
   "scripts": {
