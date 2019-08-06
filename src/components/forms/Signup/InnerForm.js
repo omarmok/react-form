@@ -1,6 +1,6 @@
 import { Field } from 'formik';
 import React from 'react';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const DefaultInput = ({ label, children }) =>(
 <div className="form-group row">
@@ -48,7 +48,7 @@ const DefaultInput = ({ label, children }) =>(
 
             </DefaultInput>
 
- <ReCAPTCHA className=" mb-5 " name="recaptcha" sitekey="6Legp2EUAAAAAKZhVvBOIj-d6mbHGwrWBfPEoiMX" onChange={(response)=> setFeldValue('recaptcha',response)}/>
+ {/* <ReCAPTCHA className=" mb-5 " name="recaptcha" sitekey="6Legp2EUAAAAAKZhVvBOIj-d6mbHGwrWBfPEoiMX" onChange={(response)=> setFeldValue('recaptcha',response)}/> */}
 
 
     <button  className="btn-block mt-4 btn-defualt" type="Submit"  disabled={!dirty || isSubmitting || Object.keys(errors).length}>
